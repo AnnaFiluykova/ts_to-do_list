@@ -1,38 +1,70 @@
-.App {
+.app {
+  margin: auto;
+  background-color: #F5F5F5;
+  display: grid;
+  width: 600px;
+  gap: 20px;
+  padding: 20px 24px;
+}
+
+.app__inscription {
+  font-size: 40px;
+  color: #E9D9D8;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__form {
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__form-input {
+  box-sizing: border-box;
+  outline: none;
+  width: 200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__form-button {
+  background-color: #E9D9D8;
+  border: 1px #767676 solid;
+  height: 22px;
+}
+
+.app__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app__list-item,
+.app__list-item-label {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__list-checkbox {
+  margin: 4px 4px 0 0;
+}
+
+.app__list-button {
+  margin: 10px;
+}
+
+.app__list-completed {
+  text-decoration: line-through;
+  color: #4D4D4D;
+}
+
+.app__buttons {
+  display: flex;
+  justify-content: space-between;
+  color: #808080;
+}
+
+.app__buttons-sort {
+  display: flex;
+  gap: 20px;
+}
+
+.app__buttons-btn {
+  cursor: pointer;
 }
