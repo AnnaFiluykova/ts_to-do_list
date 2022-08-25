@@ -63,16 +63,16 @@ function App() {
           .filter((key) => {
             if (filter === 'all') {
               return true;
-            } else if (filter === 'completed') {
-              return list[key].state === 'completed';
-            } else if (filter === 'active') {
-              return list[key].state === 'active';
+            } else if (filter === 'completed' && list[key].state === 'completed') {
+              return true;
+            } else if (filter === 'active' && list[key].state === 'active') {
+              return true;
             }
+              return false;
           })
           .map((key) => {
             const item = list[key];
             return (
-              // <form key={`list-${key}`} className={item.state === 'completed'? 'app__list-completed' : 'app__list-active'}>
               <div key={`list-${key}`} className='app__list-item'>
                 <label className={`app__list-item-label ${item.state === 'completed'? 'app__list-completed' : 'app__list-active'}`}>
                   <input
